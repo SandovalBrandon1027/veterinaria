@@ -1,6 +1,6 @@
 # _TALLER 19-20_ <br>
 
-## SPRINT 0 <br>
+# SPRINT 0 <br>
 - Corresponde a la configuraciòn  de herramientas  y entorno de trabajo.  <br>
 
 # CONFIGURACIONES INICIALES <br>
