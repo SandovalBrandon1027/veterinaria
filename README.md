@@ -1,4 +1,4 @@
-![image](https://github.com/SandovalBrandon1027/veterinaria/assets/117743120/c290230d-be4c-41f8-8488-433ee746d8d2)# _TALLER 19-20_ <br>
+# _TALLER 19-20_ <br>
 
 # SPRINT 0 <br>
 - Corresponde a la configuraciòn  de herramientas  y entorno de trabajo.  <br>
