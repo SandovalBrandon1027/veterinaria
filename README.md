@@ -63,7 +63,8 @@ Programamos la configuración y lógica necesaria para el web server. <br>
 - Ahora se procede a ejecutar el siguiente comando “npm run dev” para verificar la creación de las rutas con Thunder Client. <br>
 ![image](https://github.com/SandovalBrandon1027/veterinaria/assets/117743120/db86abf7-9c10-49c8-8055-d6c5b9b2c32d) <br>
 # Modulo de registro
-- Ahora se procede a trabajar en la lógica de cada método del controlador. Importamos el modelo “Veterinario” desde el archivo “Veterinario.js”. Método de registro de nuevo veterinario.  <br>
+- Ahora se procede a trabajar en la lógica de cada método del controlador. Importamos el modelo “Veterinario” desde el archivo “Veterinario.js”, En la función llamada registro tomamos objetos de solicitud (req) y respuesta (res) como parámetros. Después verifica si algún campo está vacío y en caso de ser así responderá con un código de estado 400 indicando que se debe llenar todos los campos. Después se verificará si el email ya está registrada. Si es así, responderá con un código de estado 400 y un mensaje indicando que el email ya está registrado. También se crea una instancia del modelo “Veterinario” utilizando los datos del cuerpo de la solicitud. Después,  utilizando un método encrypPassword se encriptará la contraseña.
+En el código también se crea un token al nuevo veterinario y se guarda al nuevo veterinario en la base de datos. Si todo es realizado correctamente, nos responderá con un código de estado 200 y un objeto JSON que contiene la información del nuevo veterinario. <br>
 ![image](https://github.com/SandovalBrandon1027/veterinaria/assets/117743120/611bfed1-22e1-4313-9065-ed59725c2720)
 
 
