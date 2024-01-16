@@ -47,75 +47,31 @@ Programamos la configuración y lógica necesaria para el web server. <br>
 - Ahora se procede a ejecutar el siguiente comando  npm run dev para verificar la funcionalidad de la conexión a la base de datos. <br>
 ![image](https://github.com/SandovalBrandon1027/veterinaria/assets/117743120/97b5f4e2-2d68-4057-a4be-15edef6500f1) <br>
 - Ahora se procede a modelar los datos (Colecciones y Documentos) mediante el uso de mongoose. Para lo cual se procede a crear un archivo llamado Veterinario.js dentro del directorio models. <br>
-//Importar el Schema y el modelo de mongoose
-import {Schema, model} from 'mongoose'
-//Importar el bcrypt para cifrar las contraseñas
-import bcrypt from "bcryptjs"
-const veterinarioSchema = new Schema({
-    nombre:{
-        type:String,
-        require:true,
-        trim:true
-    },
-    apellido:{
-        type:String,
-        require:true,
-        trim:true
-    },
-    direccion:{
-        type:String,
-        trim:true,
-        default:null
-    },
-    telefono:{
-        type:Number,
-        trim:true,
-        default:null
-    },
-    email:{
-        type:String,
-        require:true,
-        trim:true,
-                unique:true
-    },
-    password:{
-        type:String,
-        require:true
-    },
-    status:{
-        type:Boolean,
-        default:true
-    },
-    token:{
-        type:String,
-        default:null
-    },
-    confirmEmail:{
-        type:Boolean,
-        default:false
-    }
-},{
-    timestamps:true
-})
-// Método para cifrar el password del veterinario
-veterinarioSchema.methods.encrypPassword = async function(password){
-    const salt = await bcrypt.genSalt(10)
-    const passwordEncryp = await bcrypt.hash(password,salt)
-    return passwordEncryp
-}
+![image](https://github.com/SandovalBrandon1027/veterinaria/assets/117743120/0433d73e-2e4d-49c7-9915-60f7d8088367) <br>
+![image](https://github.com/SandovalBrandon1027/veterinaria/assets/117743120/23c4bebd-c3dc-495a-a14a-55043252ace2) <br>
+# Rutas
+- Ahora se procede a crear las respectivas rutas para el modelo Veterinario, en ese sentido, se procede a crear el siguiente archivo en la ruta respectiva. <br>
+![image](https://github.com/SandovalBrandon1027/veterinaria/assets/117743120/c9bbae3a-dcd9-47bb-b322-1b82db803004) <br>
+- Ahora se procede a trabajar en la invocación de las rutas. <br>
+![image](https://github.com/SandovalBrandon1027/veterinaria/assets/117743120/031cefc5-9da1-49d1-a366-9d58a59e1188) <br>
+# Controladores
+- Ahora se procede a crear los respectivos controladores para las rutas del Veterinario, en ese sentido, se procede a crear el siguiente archivo en la ruta respectiva. <br>
+![image](https://github.com/SandovalBrandon1027/veterinaria/assets/117743120/22a8c143-b885-4d47-80b6-49213738e0c9) <br>
+![image](https://github.com/SandovalBrandon1027/veterinaria/assets/117743120/165fff81-88ca-4d27-90bd-5c2abef2dce8) <br>
+- Ahora en “veterinario_routes.js” se procede a trabajar en la invocación de las rutas. <br>
+![image](https://github.com/SandovalBrandon1027/veterinaria/assets/117743120/9066892b-eb7a-479e-93dc-56c743820813) <br>
+- Ahora se procede a ejecutar el siguiente comando “npm run dev” para verificar la creación de las rutas con Thunder Client. <br>
+![image](https://github.com/SandovalBrandon1027/veterinaria/assets/117743120/db86abf7-9c10-49c8-8055-d6c5b9b2c32d) <br>
+# Modulo de registro
+- Ahora se procede a trabajar en la lógica de cada método del controlador. Importamos el modelo “Veterinario” desde el archivo “Veterinario.js”. Método de registro de nuevo veterinario.  <br>
+![image](https://github.com/SandovalBrandon1027/veterinaria/assets/117743120/611bfed1-22e1-4313-9065-ed59725c2720)
 
-// Método para verificar si el password ingresado es el mismo de la BDD
-veterinarioSchema.methods.matchPassword = async function(password){
-    const response = await bcrypt.compare(password,this.password)
-    return response
-}
-// Método para crear un token 
-veterinarioSchema.methods.crearToken = function(){
-    const tokenGenerado = this.token = Math.random().toString(36).slice(2)
-    return tokenGenerado
-}
-//Crear un modelo Veterinario "Tabla BDD"
-export default model('Veterinario',veterinarioSchema)
+
+
+
+
+
+
 
 
 
