@@ -1,6 +1,6 @@
 # _TALLER 19-20_ <br>
 
-# SPRINT 0 <br>
+## SPRINT 0 <br>
 - Corresponde a la configuraciòn  de herramientas  y entorno de trabajo.  <br>
 
 # CONFIGURACIONES INICIALES <br>
@@ -22,7 +22,7 @@ Programamos la configuración y lógica necesaria para el web server. <br>
 - BASES DE DATOS
 ![image](https://github.com/SandovalBrandon1027/veterinaria/assets/117743538/572cbd56-44c5-4223-bd6e-5f31d14f5186)
 
-# SPRINT 1 <br>
+## SPRINT 1 <br>
 
 - Una vez ya realizada las configuraciones procederemos a realizar el “SPRINT 1”. Para ello importaremos Express, seguido a ello crearemos una instancia de express y haremos las inicializaciones y finalmente exportaremos la instancia de express por medio de app. <br>
 ![image](https://github.com/SandovalBrandon1027/veterinaria/assets/117743120/b51745d9-08c0-4c27-bac7-6ce5b3750d39) <br>
@@ -49,12 +49,12 @@ Programamos la configuración y lógica necesaria para el web server. <br>
 - Ahora se procede a modelar los datos (Colecciones y Documentos) mediante el uso de mongoose. Para lo cual se procede a crear un archivo llamado Veterinario.js dentro del directorio models. <br>
 ![image](https://github.com/SandovalBrandon1027/veterinaria/assets/117743120/0433d73e-2e4d-49c7-9915-60f7d8088367) <br>
 ![image](https://github.com/SandovalBrandon1027/veterinaria/assets/117743120/23c4bebd-c3dc-495a-a14a-55043252ace2) <br>
-# Rutas
+### Rutas
 - Ahora se procede a crear las respectivas rutas para el modelo Veterinario, en ese sentido, se procede a crear el siguiente archivo en la ruta respectiva. <br>
 ![image](https://github.com/SandovalBrandon1027/veterinaria/assets/117743120/c9bbae3a-dcd9-47bb-b322-1b82db803004) <br>
 - Ahora se procede a trabajar en la invocación de las rutas. <br>
 ![image](https://github.com/SandovalBrandon1027/veterinaria/assets/117743120/031cefc5-9da1-49d1-a366-9d58a59e1188) <br>
-# Controladores
+### Controladores
 - Ahora se procede a crear los respectivos controladores para las rutas del Veterinario, en ese sentido, se procede a crear el siguiente archivo en la ruta respectiva. <br>
 ![image](https://github.com/SandovalBrandon1027/veterinaria/assets/117743120/22a8c143-b885-4d47-80b6-49213738e0c9) <br>
 ![image](https://github.com/SandovalBrandon1027/veterinaria/assets/117743120/165fff81-88ca-4d27-90bd-5c2abef2dce8) <br>
@@ -62,7 +62,7 @@ Programamos la configuración y lógica necesaria para el web server. <br>
 ![image](https://github.com/SandovalBrandon1027/veterinaria/assets/117743120/9066892b-eb7a-479e-93dc-56c743820813) <br>
 - Ahora se procede a ejecutar el siguiente comando “npm run dev” para verificar la creación de las rutas con Thunder Client. <br>
 ![image](https://github.com/SandovalBrandon1027/veterinaria/assets/117743120/db86abf7-9c10-49c8-8055-d6c5b9b2c32d) <br>
-# Modulo de registro
+### Modulo de registro
 - Ahora se procede a trabajar en la lógica de cada método del controlador. Importamos el modelo “Veterinario” desde el archivo “Veterinario.js”, En la función llamada registro tomamos objetos de solicitud (req) y respuesta (res) como parámetros. Después verifica si algún campo está vacío y en caso de ser así responderá con un código de estado 400 indicando que se debe llenar todos los campos. Después se verificará si el email ya está registrada. Si es así, responderá con un código de estado 400 y un mensaje indicando que el email ya está registrado. También se crea una instancia del modelo “Veterinario” utilizando los datos del cuerpo de la solicitud. Después,  utilizando un método encrypPassword se encriptará la contraseña.
 En el código también se crea un token al nuevo veterinario y se guarda al nuevo veterinario en la base de datos. Si todo es realizado correctamente, nos responderá con un código de estado 200 y un objeto JSON que contiene la información del nuevo veterinario. <br>
 ![image](https://github.com/SandovalBrandon1027/veterinaria/assets/117743120/611bfed1-22e1-4313-9065-ed59725c2720)
