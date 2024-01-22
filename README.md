@@ -88,9 +88,11 @@ En el código también se crea un token al nuevo veterinario y se guarda al nuev
 
 - Instalaremos el paquete ```npm i express-validator``` el cual nos ayudara con la validación de los datos.
 - Y crearemos el arachivo validacionVeterinario.js dentro de la carpeta middlewares.
-- El siguiente código nos ayudará a realizar la validación de los datos que entren por los campos de formulario por ejemplo un nombre, correo o número de teléfono, gracias al paquete express-validator es posible realizar todas estas aciones de manera fácil y rápida.
+- El siguiente código nos ayudará a realizar la validación de los datos que entren por los campos de formulario por ejemplo un nombre, correo o número de teléfono, gracias al paquete express-validator es posible realizar todas estas aciones de manera fácil y rápida.<br>
 
-![image](https://github.com/SandovalBrandon1027/veterinaria/assets/150082943/408ca916-7ef0-4181-8620-6ad47a1a4732)
+![image](https://github.com/SandovalBrandon1027/veterinaria/assets/150082943/408ca916-7ef0-4181-8620-6ad47a1a4732)<br>
+- Agregaremos este código en el archivo veterinario_routes.js.<br>
+![image](https://github.com/SandovalBrandon1027/veterinaria/assets/150082943/9a5c9bcf-9fb0-452b-9494-36f91759ed0b)
 
 
 
