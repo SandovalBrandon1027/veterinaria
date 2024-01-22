@@ -73,6 +73,24 @@ En el código también se crea un token al nuevo veterinario y se guarda al nuev
 
 ### Recuperacion de contraseña <br>
 
+### Actualización perfil <br>
+
+- Se usa una función asyn / await con condicionales en donde se establece la validación de un ID y existencia de este ya sea en la base de datos o como usuario ya existente y por último el llenado de todos los campos. <br> <br>
+
+![image](https://github.com/SandovalBrandon1027/veterinaria/assets/150082943/09f3238e-76a3-40d1-a2bf-c83868e13b0f)
+
+### Actualización password <br>
+- Se usa una función asyn / await con condicionales en donde se espera a partir de un ID enviado encontremos uno veterinario para ser actualizada su contraseña, además que confirmaremos si la persona la cual está realizando la actualización es permitida de hacerlo atrevés de la petición de la contraseña actual. Y si es el caso se registrara la nueva contraseña.<br> <br>
+
+![image](https://github.com/SandovalBrandon1027/veterinaria/assets/150082943/d2fe4062-1bf9-40b3-a847-1d109072c898)
+
+### Validación de datos <br>
+
+- Instalaremos el paquete ```npm i express-validator``` el cual nos ayudara con la validación de los datos.
+- Y crearemos el arachivo validacionVeterinario.js dentro de la carpeta middlewares.
+- El siguiente código nos ayudará a realizar la validación de los datos que entren por los campos de formulario por ejemplo un nombre, correo o número de teléfono, gracias al paquete express-validator es posible realizar todas estas aciones de manera fácil y rápida.
+
+![image](https://github.com/SandovalBrandon1027/veterinaria/assets/150082943/408ca916-7ef0-4181-8620-6ad47a1a4732)
 
 
 
