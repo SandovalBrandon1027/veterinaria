@@ -33,7 +33,6 @@ const sendMailToUser = (userMail, token) => {
 };
 
 
-
 // send mail with defined transport object
 const sendMailToRecoveryPassword = async(userMail,token)=>{
     let info = await transporter.sendMail({
